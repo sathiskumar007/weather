@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-size: 12px;
+        }
+        body {
+            font-family: calibri;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(0, 0, 0, 0.4);
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            gap: 30px;
+        }
+        table {
+            background: #4284ff;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(207, 204, 204, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: inline-block;
+            background: rgba(237, 230, 230, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            width: 280px;
+            display: none;
+        }
+        th,
+        td {
+            padding: 10px 40px;
+            text-align: center;
+            color: rgb(212, 203, 203);
+        }
+        td{
+            width: 60%;
+        }
+        th{
+            width: 40%;
+        }
+        tr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        button {
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: rgb(55, 255, 0);
+            color: white;
+            font-family: calibri;
+            border: none;
+            box-shadow: 2px 2px 15px rgb(108, 108, 108);
+            font-size: 20px;
+            cursor: pointer;
+            align-items: center;
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+        input {
+            width: 200px;
+            height: 20px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 6px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input:focus{
+            border: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <table id="tbl">
+            <tr>
+                <th id="thone">check</th>
+                <td id="tdone">checking</td>
+            </tr>
+            <tr>
+                <th id="thtwo">check</th>
+                <td id="tdtwo">checking</td>
+            </tr>
+            <tr>
+                <th id="ththree">check</th>
+                <td id="tdthree">checking</td>
+            </tr>
+            <tr>
+                <th id="thfour">check</th>
+                <td id="tdfour">checking</td>
+            </tr>
+            <tr>
+                <th id="thfive">check</th>
+                <td id="tdfive">checking</td>
+            </tr>
+            <tr>
+                <th id="thsix">check</th>
+                <td id="tdsix">checking</td>
+            </tr>
+            <tr>
+                <th id="thseven">check</th>
+                <td id="tdseven">checking</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+    <input type="text" id="checking">
+    <button id="btn" onclick="loadFun()">click me</button>
+    
+    <script>
+        function loadFun() {
+            let apiKey = "18ce5a2160dcee43721bf24f69042b93";
+
+            let cityName = document.getElementById("checking").value;
+           if(cityName.length < 3){
+            alert("Enter Your Location Properly");
+           }
+           else{
+            let weather = new XMLHttpRequest();
+            weather.onreadystatechange = function () {
+
+                if (weather.readyState == 4 && weather.status == 200) {
+                    
+                    let weatherFeatching = JSON.parse(weather.responseText);
+                    console.log(weatherFeatching);
+
+                    let thOne = document.getElementById("thone");
+                    let thTwo = document.getElementById("thtwo");
+                    let thThree = document.getElementById("ththree");
+                    let thFour = document.getElementById("thfour");
+                    let thFive = document.getElementById("thfive");
+                    let thSix = document.getElementById("thsix");
+                    let thSeven = document.getElementById("thseven");
+
+                    thOne.style.display = "inline-block";
+                    thTwo.style.display = "inline-block";
+                    thThree.style.display = "inline-block";
+                    thFour.style.display = "inline-block";
+                    thFive.style.display = "inline-block";
+                    thSix.style.display = "inline-block";
+                    thSeven.style.display = "inline-block";
+
+                    thOne.textContent = "City Name";
+                    thTwo.textContent = "Temparature";
+                    thThree.textContent = "Lontitude";
+                    thFour.textContent = "Latitude";
+                    thFive.textContent = "Country";
+                    thSix.textContent = "Condition";
+                    thSeven.textContent = "Discription";
+
+                    let tdOne = document.getElementById("tdone");
+                    let tdTwo = document.getElementById("tdtwo");
+                    let tdThree = document.getElementById("tdthree");
+                    let tdFour = document.getElementById("tdfour");
+                    let tdFive = document.getElementById("tdfive");
+                    let tdSix = document.getElementById("tdsix");
+                    let tdSeven = document.getElementById("tdseven");
+
+                    tdOne.style.display = "inline-block";
+                    tdTwo.style.display = "inline-block";
+                    tdThree.style.display = "inline-block";
+                    tdFour.style.display = "inline-block";
+                    tdFive.style.display = "inline-block";
+                    tdSix.style.display = "inline-block";
+                    tdSeven.style.display = "inline-block";
+
+                    tdOne.textContent = weatherFeatching.name;
+                    tdTwo.textContent = weatherFeatching.main.temp + "°C";
+                    tdThree.textContent = weatherFeatching.coord.lon;
+                    tdFour.textContent = weatherFeatching.coord.lat;
+                    tdFive.textContent = weatherFeatching.sys.country;
+                    tdSix.textContent = weatherFeatching.weather[0].main;
+                    tdSeven.textContent = weatherFeatching.weather[0].description;
+
+                    let table = document.getElementById("tbl");
+                    table.style.display = "block";
+
+                        if (cityName == "Madurai") {
+                            document.body.style.backgroundImage = "url(https://img.veenaworld.com/wp-content/uploads/2020/11/10-Madurai-Temples-with-Brilliant-Architecture-scaled.jpg)";
+                        }
+                        if (cityName == "Chennai") {
+                            document.body.style.backgroundImage = "url(https://www.fabhotels.com/blog/wp-content/uploads/2019/02/1400x600-47.jpg)";
+                        }
+                        if (cityName == "Theni") {
+                            document.body.style.backgroundImage = "url(https://1.bp.blogspot.com/-WwTVFXm_Eag/YC6zdgg54MI/AAAAAAAAALo/NkR3ombS5nU_jeXkUF5bclHAmsk4-YsSQCLcBGAsYHQ/s2048/IMG_20201218_165438-01.jpeg)";
+                        }
+                        if (cityName == "Thoothukudi") {
+                            document.body.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/7/71/Tuticorin_Thermal_Power_Station_at_Night_1_crop.jpg)";
+                        }
+                        if (cityName == "Coimbatore") {
+                            document.body.style.backgroundImage = "url(https://www.seawatersports.com/img/newimage/places/coimbatore-in-tamil-nadu.jpg)";
+                        }
+                }
+            }
+            weather.open(`GET`, `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`);
+            weather.send();
+           }
+        }
+
+    </script>
+</body>
+
+</html>
