@@ -1,0 +1,224 @@
+{
+    "name":"sathishkumar"
+    
+    
+
+
+}
+
+// <style>
+// * {
+//     margin: 0%;
+//     padding: 0%;
+//     font-size: 12px;
+// }
+// body {
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     background-color: #fff;
+// }
+
+// th {
+//     color: #f3f3f4;
+//     font-size: 12px;
+//     font-family: Roboto;
+//     font-weight: 700;
+//     line-height: 18px;
+//     word-wrap: break-word;
+//     font-family: sans-serif
+// }
+
+// td {
+//     color: #666666;
+//     font-size: 14px;
+//     font-weight: 400;
+//     line-height: 20px;
+//     letter-spacing: 0.04px;
+//     word-wrap: break-word;
+//     border: #dddddd;
+// }
+
+// tr {
+//     border: 1px solid rgba(0, 0, 0, 0.12)
+// }
+
+// table {
+//     font-family: arial, sans-serif;
+//     border-collapse: collapse;
+//     width: 50%;
+//     border-radius: 4px;
+//     margin: auto;
+//     border: #fff;
+//     display: none;
+// }
+
+// td,
+// th {
+//     border-top: 1px solid #dddddd;
+//     text-align: left;
+//     padding: 8px;
+
+// }
+
+// button {
+//     width: 114px;
+//     height: 36px;
+//     background: #757AE9;
+//     border-radius: 4px;
+//     border: none;
+//     color: white;
+//     text-transform: uppercase;
+//     /* margin: auto; */margin-top: 30px;
+//     font-family: sans-serif;
+//     cursor: pointer
+// }
+
+
+
+// .form__group {
+//     position: relative;
+//     padding: 15px 0 0;
+//     margin-top: 10px;
+//     width: 50%;
+// }
+
+// .form__field {
+//     font-family: inherit;
+//     width: 50%;
+//     border: 0;
+//     border-bottom: 2px solid#9b9b9b;
+//     outline: 0;
+//     font-size: 1.3rem;
+//     color: white;
+//     padding: 7px 0;
+//     background: transparent;
+//     transition: border-color 0.2s;
+
+//     &::placeholder {
+//         color: transparent;
+//     }
+
+//     &:placeholder-shown~.form__label {
+//         font-size: 1.3rem;
+//         cursor: text;
+//         top: 20px;
+//     }
+// }
+
+// .form__label {
+//     position: absolute;
+//     top: 0;
+//     display: block;
+//     transition: 0.2s;
+//     font-size: 1rem;
+//     color:#9b9b9b;
+// }
+
+// .form__field:focus {
+//     ~.form__label {
+//         position: absolute;
+//         top: 0;
+//         display: block;
+//         transition: 0.2s;
+//         font-size: 1rem;
+//         color: #11998e;
+//         font-weight: 700;
+//     }
+
+//     padding-bottom: 6px;
+//     font-weight: 700;
+//     border-width: 3px;
+//     border-image: linear-gradient(to right, #11998e, #38ef7d);
+//     border-image-slice: 1;
+// }
+
+// /* reset input */
+// .form__field {
+
+//     &:required,
+//     &:invalid {
+//         box-shadow: none;
+//     }
+// }
+
+// /* demo */
+// body {
+//     font-family: 'Poppins', sans-serif;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     min-height: 100vh;
+//     font-size: 1.5rem;
+//     background-color: #222222;
+// }
+// </style>
+// </head>
+
+// <body>
+
+// <!-- 
+// <div id="container">
+// <table id="tbl">
+//     <tr>
+//         <th id="thone">check</th>
+//         <td id="tdone">checking</td>
+//     </tr>
+//     <tr>
+//         <th id="thtwo">check</th>
+//         <td id="tdtwo">checking</td>
+//     </tr>
+//     <tr>
+//         <th id="ththree">check</th>
+//         <td id="tdthree">checking</td>
+//     </tr>
+//     <tr>
+//         <th id="thfour">check</th>
+//         <td id="tdfour">checking</td>
+//     </tr>
+//     <tr>
+//         <th id="thfive">check</th>
+//         <td id="tdfive">checking</td>
+//     </tr>
+//     <tr>
+//         <th id="thsix">check</th>
+//         <td id="tdsix">checking</td>
+//     </tr>
+//     <tr>
+//         <th id="thseven">check</th>
+//         <td id="tdseven">checking</td>
+//     </tr>
+
+// </table>
+
+
+// </div> -->
+// <table id="myTable">
+// <thead>
+//     <tr>
+//         <th id="thone">check</th>
+//         <th id="thtwo">check</th>
+//         <th id="ththree">check</th>
+//         <th id="thfour">check</th>
+//         <th id="thfive">check</th>
+//         <th id="thsix">check</th>
+//         <th id="thseven">check</th>
+//     </tr>
+// </thead>
+// <tbody>
+//     <tr>
+//         <td id="tdone">checking</td>
+//         <td id="tdtwo">checking</td>
+//         <td id="tdthree">checking</td>
+//         <td id="tdfour">checking</td>
+//         <td id="tdfive">checking</td>
+//         <td id="tdsix">checking</td>
+//         <td id="tdseven">checking</td>
+//     </tr>
+// </tbody>
+// </table>
+// <div class="form__group field">
+// <input type="input" class="form__field" placeholder="Name" name="name" id='checking' required />
+// <label for="name" class="form__label">Name</label>
+// </div>
